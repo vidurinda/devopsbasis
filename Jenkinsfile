@@ -24,8 +24,12 @@ node{
           }
       }
   */
-  sshagent (['tomcat-dev']) {
+  
+  stage('deploy') {
+    sshagent (['tomcat-dev']) {
     sh 'scp -o StrictHostKeyChecking=no target/*.war az-user@23.99.213.164:/opt/apache-tomcat-9.0.60/webapps/'
+   }
   }
+ 
   
 }
