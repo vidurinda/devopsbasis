@@ -1,5 +1,2 @@
 [dev]
 52.176.107.100 ansible_user=az-user
-
-[servers:vars]
-ansible_python_interpreter=/usr/bin/python
