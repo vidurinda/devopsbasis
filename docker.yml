@@ -10,6 +10,8 @@
       pip:
         name: docker-py
         state: present
+      vars:
+        ansible_python_interpreter: /bin/python3
     - name: Start docker container
       docker_container:
         name: vidurinda
