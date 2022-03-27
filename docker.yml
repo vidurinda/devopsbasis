@@ -2,6 +2,23 @@
 - hosts: dev
   become: True
   tasks:
+    - name: install python pip
+      yum: 
+        name: python-pip
+        state: present
+    - name: Install Docker
+      yum:
+        name:docker
+        state: present
+    - name: start docker
+      service: 
+        name: docker
+        state: started
+        enabled: yes
+    - name: Install docker-py python module
+      pip:
+        name: docker-py
+        state: present
     - name: Start docker container
       docker_container:
         name: vidurinda
