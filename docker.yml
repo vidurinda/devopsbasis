@@ -1,5 +1,7 @@
 ---
 - hosts: dev
+  environment:
+    PYTHONPATH: "/home/path/.local/lib/python2.7/site-packages"
   become: True
   tasks:
     - name: install python pip
